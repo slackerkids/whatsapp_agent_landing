@@ -2,12 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const benefits = [
-  "14 дней бесплатного пробного периода",
   "Полный доступ ко всем функциям",
   "Техническая поддержка 24/7",
-  "Отмена в любое время"
+  "Отмена в любое время",
 ];
 
 export function CTA() {
@@ -27,7 +27,8 @@ export function CTA() {
                   Готовы улучшить коммуникацию с клиентами?
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Присоединяйтесь к тысячам компаний, которые уже используют нашего WhatsApp AI агента
+                  Присоединяйтесь к тысячам компаний, которые уже используют
+                  нашего WhatsApp AI агента
                 </p>
                 <ul className="space-y-4 mb-8">
                   {benefits.map((benefit, index) => (
@@ -44,10 +45,16 @@ export function CTA() {
                     </motion.li>
                   ))}
                 </ul>
-                <Button size="lg" className="group">
-                  Начать бесплатно
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link
+                  href="https://wa.me/77079837010?text=Здравствуйте!%20Пишу%20вам%20с%20вебсайта%20насчет%20подключения%20ии"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="group">
+                    Начать
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -73,4 +80,4 @@ export function CTA() {
       </div>
     </section>
   );
-} 
+}

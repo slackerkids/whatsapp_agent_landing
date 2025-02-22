@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquareText, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -18,17 +19,20 @@ export function Hero() {
               WhatsApp AI Агент
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              Автоматизируйте общение с клиентами и сократите расходы на поддержку до 30% с помощью искусственного интеллекта
+              Автоматизируйте общение с клиентами и сократите расходы на
+              поддержку до 30% с помощью искусственного интеллекта
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
-                Начать бесплатно
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="group">
-                <MessageSquareText className="mr-2 h-4 w-4" />
-                Демонстрация
-              </Button>
+              <Link
+                href="https://wa.me/77079837010?text=Здравствуйте!%20Пишу%20вам%20с%20вебсайта%20насчет%20подключения%20ии"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="group">
+                  Начать
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="mt-8 flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center">
@@ -38,16 +42,7 @@ export function Hero() {
                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
                 </svg>
-                Бесплатный пробный период
-              </div>
-              <div className="flex items-center">
-                <svg viewBox="0 0 24 24" className="h-4 w-4 mr-2 text-primary">
-                  <path
-                    fill="currentColor"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  />
-                </svg>
-                Без привязки карты
+                Работает на индивидуальном аккаунте
               </div>
             </div>
           </motion.div>
@@ -71,4 +66,4 @@ export function Hero() {
       </div>
     </section>
   );
-} 
+}
